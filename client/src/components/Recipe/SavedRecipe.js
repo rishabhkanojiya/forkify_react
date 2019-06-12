@@ -5,7 +5,8 @@ import { fetchSaveIngre } from "../../actions";
 
 export class SavedRecipe extends Component {
   componentDidMount() {
-    this.props.fetchSaveIngre(this.props.saveId);
+    // console.log(this.props.saveId.payload);
+    this.props.fetchSaveIngre(this.props.saveId.payload);
   }
   render() {
     return (
@@ -15,8 +16,8 @@ export class SavedRecipe extends Component {
           Saved
         </h4>
         <div className="ui grid container">
-          <div class="three column row">
-            <div class="column">
+          <div className="three column row">
+            <div className="column">
               <RecipeCard
                 isLoading={this.props.isLoading}
                 ingre={this.props.ingre}
