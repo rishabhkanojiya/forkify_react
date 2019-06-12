@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import RecipeDetail from "./Recipe/RecipeDetail";
 import RecipeList from "./Recipe/RecipeList";
-import RecipeSave from "./Recipe/RecipeSaved";
 import history from "../history";
 import { Router, Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import SavedRecipe from "./Recipe/SavedRecipe";
+import RecipeCard from "./Recipe/RecipeCard";
 
 export class App extends Component {
   render() {
@@ -20,14 +20,12 @@ export class App extends Component {
                 style={{ padding: "30px" }}
               >
                 <div className="row">
-                  <div className="four wide computer six wide mobile column">
+                  <div className="six wide computer six wide mobile column">
                     <RecipeList />
                   </div>
-                  <div className="eight wide computer six wide mobile column">
+
+                  <div className="ten wide computer six wide mobile column">
                     <RecipeDetail />
-                  </div>
-                  <div className="four wide computer six wide mobile column">
-                    <RecipeSave />
                   </div>
                 </div>
               </div>

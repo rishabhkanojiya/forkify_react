@@ -1,10 +1,8 @@
-const initialState = {
-  // term: "pizza"
-};
+const initialState = {};
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
-    case "GET_TERM":
+    case "SAVE_RECIPE":
       return { ...state, payload };
 
     default:

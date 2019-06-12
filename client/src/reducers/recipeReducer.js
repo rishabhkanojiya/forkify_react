@@ -11,8 +11,8 @@ export default (state = initialState, { type, payload, error }) => {
       return { ...state, isLoading: true };
 
     case "FETCH_RECIPES_SUCCESS":
-      return { ...state, ..._.mapKeys(payload, "recipe_id"), isLoading: false };
-
+      return { ...state, payload, isLoading: false };
+    // ..._.mapKeys(payload, "recipe_id")
     case "FETCH_RECIPES_FAILURE":
       return { ...state, error: error, isLoading: false };
 
